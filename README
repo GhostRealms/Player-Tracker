@@ -35,11 +35,3 @@ Permission node: playertracker.hidetracks
     Removes a given player/IP from the list of players immune to lookups.
 
 Permission node: playertracker.hidetracks
-
-Configuration
-Check out the Configuration Page. http://dev.bukkit.org/server-mods/player-tracker/pages/configuration/
-
-Permissions
-Check out the Permissions Page. http://dev.bukkit.org/server-mods/player-tracker/pages/permissions/
-
-Under development for SoftSlayer.com.
