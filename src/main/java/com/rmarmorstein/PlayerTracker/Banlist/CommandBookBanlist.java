@@ -6,6 +6,8 @@ import com.sk89q.commandbook.CommandBook;
 import com.sk89q.commandbook.bans.BanDatabase;
 import com.sk89q.commandbook.bans.BansComponent;
 
+import java.util.UUID;
+
 
 public class CommandBookBanlist extends Banlist {
 	
@@ -17,7 +19,8 @@ public class CommandBookBanlist extends Banlist {
 		this.bandb = bans_plugin.getComponentManager().getComponent(BansComponent.class).getBanDatabase();
 	}
 	
-	public boolean isBanned( String playername ) {
-		return bandb.isBannedName( playername );
+	@Override
+	public boolean isBanned( UUID uuid ) {
+		return bandb.isBanned(uuid);
 	}
 }

@@ -7,6 +7,7 @@ import com.earth2me.essentials.Essentials;
 import com.earth2me.essentials.User;
 
 public class EssentialsBanlist extends Banlist {
+	
 	private Essentials banlistPlug;
 	
 	public EssentialsBanlist( PlayerTracker instance ) {
