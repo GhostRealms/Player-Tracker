@@ -1,26 +1,26 @@
 package com.rmarmorstein.PlayerTracker.Banlist;
 
 import com.rmarmorstein.PlayerTracker.PlayerTracker;
-//import org.bukkit.entity.Player;
 
 import com.earth2me.essentials.Essentials;
 import com.earth2me.essentials.User;
+import org.bukkit.Bukkit;
+
+import java.util.UUID;
 
 public class EssentialsBanlist extends Banlist {
 	
-	private Essentials banlistPlug;
+	private Essentials ess;
 	
 	public EssentialsBanlist( PlayerTracker instance ) {
 		this.plugin = instance;
-		this.banlistPlug = (Essentials) plugin.getServer().getPluginManager().getPlugin("Essentials");
+		this.ess = (Essentials) plugin.getServer().getPluginManager().getPlugin("Essentials");
 	}
-	public boolean isBanned( String playername ) {
-		//User user = banlistPlug.getUser( (Player) plugin.getServer().getOfflinePlayer( playername ) );
-		User user = banlistPlug.getUser( playername );
+	@Override
+	public boolean isBanned(UUID uuid) {
+		User user = ess.getUser(Bukkit.getPlayer(uuid));
 		if ( user == null )
 			return false;
-		
 		return user.isBanned();
-
 	}
 }

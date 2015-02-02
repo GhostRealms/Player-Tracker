@@ -12,6 +12,7 @@ public class VanillaBanlist extends Banlist {
 	
 	@Override
 	public boolean isBanned(UUID uuid) {
-		return plugin.getServer().getOfflinePlayer(uuid).isBanned();
+		if (plugin.getServer().getOfflinePlayer(uuid).isBanned()) return true;
+		else return false;
 	}
 }
