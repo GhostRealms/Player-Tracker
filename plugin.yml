@@ -1,8 +1,9 @@
 name: Player-Tracker
-main: org.LostTheGame.PlayerTracker.PlayerTracker
-author: NINJ4
+main: PlayerTracker
+author: Rmarmorstein
+authors: [NINJ4]
 softdepend: [Essentials, CommandBook, FigAdmin, BanHammer, Ultrabans, UltraBanLite]
-version: 1.3.1
+version: 1.4
 
 commands:
   track:
