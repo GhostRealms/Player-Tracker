@@ -16,6 +16,7 @@ public class EssentialsBanlist extends Banlist {
 		this.plugin = instance;
 		this.ess = (Essentials) plugin.getServer().getPluginManager().getPlugin("Essentials");
 	}
+	
 	@Override
 	public boolean isBanned(UUID uuid) {
 		User user = ess.getUser(Bukkit.getPlayer(uuid));
